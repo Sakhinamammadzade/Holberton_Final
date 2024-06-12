@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const authRoutes = require("./routes/Auth");
+const userRoutes = require("./routes/User");
 const { connectToDB } = require("./database/db");
 
 // server init
@@ -24,6 +25,7 @@ server.use(cookieParser());
 
 // routeMiddleware
 server.use("/auth", authRoutes);
+server.use("/users", userRoutes);
 
 server.get("/", (req, res) => {
   res.status(200).json({ message: "running" });
