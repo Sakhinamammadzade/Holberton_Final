@@ -1,9 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const { connectToDB } = require("./database/db");
 
 // server init
 const server = express();
+
+// database connection
+connectToDB();
 
 // middlewares
 server.use(
@@ -16,7 +20,6 @@ server.use(
 );
 server.use(express.json());
 server.use(cookieParser());
-
 
 server.get("/", (req, res) => {
   res.status(200).json({ message: "running" });
