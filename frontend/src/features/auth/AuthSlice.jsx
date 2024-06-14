@@ -228,7 +228,7 @@ const authSlice=createSlice({
 })
 
 
-// exporting selectors
+// exporting for selectors
 export const selectAuthStatus=(state)=>state.AuthSlice.status
 export const selectAuthErrors=(state)=>state.AuthSlice.errors
 export const selectLoggedInUser=(state)=>state.AuthSlice.loggedInUser
@@ -250,7 +250,7 @@ export const selectResetPasswordStatus=(state)=>state.AuthSlice.resetPasswordSta
 export const selectResetPasswordSuccessMessage=(state)=>state.AuthSlice.resetPasswordSuccessMessage
 export const selectResetPasswordError=(state)=>state.AuthSlice.resetPasswordError
 
-// exporting reducers
+// exporting for reducers
 export const {clearAuthSuccessMessage,clearAuthErrors,resetAuthStatus,clearSignupError,resetSignupStatus,clearLoginError,resetLoginStatus,clearOtpVerificationError,resetOtpVerificationStatus,clearResendOtpError,clearResendOtpSuccessMessage,resetResendOtpStatus,clearForgotPasswordError,clearForgotPasswordSuccessMessage,resetForgotPasswordStatus,clearResetPasswordError,clearResetPasswordSuccessMessage,resetResetPasswordStatus}=authSlice.actions
 
 export default authSlice.reducer
