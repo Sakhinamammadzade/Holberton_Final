@@ -7,6 +7,7 @@ exports.verifyToken=async(req,res,next)=>{
         // extract the token from request cookies
         const {token}=req.cookies
 
+        
         // if token is not there, return 401 response
         if(!token){
             return res.status(401).json({message:"Token missing, please login again"})
