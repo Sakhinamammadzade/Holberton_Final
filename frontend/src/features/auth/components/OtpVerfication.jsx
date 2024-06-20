@@ -19,8 +19,6 @@ export const OtpVerfication = () => {
     const resendOtpSuccessMessage=useSelector(selectResendOtpSuccessMessage)
     const otpVerificationStatus=useSelector(selectOtpVerificationStatus)
     const otpVerificationError=useSelector(selectOtpVerificationError)
-
-    // handles the redirection
     useEffect(()=>{
         if(!loggedInUser){
             navigate('/login')
@@ -50,7 +48,6 @@ export const OtpVerfication = () => {
         }
     },[resendOtpError])
 
-    // handles resend otp success message
     useEffect(()=>{
         if(resendOtpSuccessMessage){
             toast.success(resendOtpSuccessMessage.message)
@@ -59,8 +56,6 @@ export const OtpVerfication = () => {
             dispatch(clearResendOtpSuccessMessage())
         }
     },[resendOtpSuccessMessage])
-
-    // handles error while verifying otp
     useEffect(()=>{
         if(otpVerificationError){
             toast.error(otpVerificationError.message)
