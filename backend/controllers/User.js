@@ -16,8 +16,7 @@ exports.updateById=async(req,res)=>{
     try {
         const {id}=req.params
         const updated=(await User.findByIdAndUpdate(id,req.body,{new:true})).toObject()
-        delete updated.password
-        res.status(200).json(updated)
+       
 
     } catch (error) {
         console.log(error);
