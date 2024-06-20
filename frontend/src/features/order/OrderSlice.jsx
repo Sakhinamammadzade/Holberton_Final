@@ -100,10 +100,9 @@ const orderSlice=createSlice({
     }
 })
 
-// exporting reducers
 export const {resetCurrentOrder,resetOrderUpdateStatus,resetOrderFetchStatus}=orderSlice.actions
 
-// exporting selectors
+
 export const selectOrderStatus=(state)=>state.OrderSlice.status
 export const selectOrders=(state)=>state.OrderSlice.orders
 export const selectOrdersErrors=(state)=>state.OrderSlice.errors
