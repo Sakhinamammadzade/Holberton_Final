@@ -80,8 +80,7 @@ export const UserOrders = () => {
             </Stack>
             :
             <Stack width={is1200?"auto":"60rem"} p={is480?2:4} mb={'5rem'}>
-                
-                {/* heading and navigation */}
+             
                 <Stack flexDirection={'row'} columnGap={2} >
                     {
                         !is480 && <motion.div whileHover={{x:-5}} style={{alignSelf:"center"}}>
@@ -100,7 +99,7 @@ export const UserOrders = () => {
                 {/* orders */}
                 <Stack mt={5} rowGap={5}>
 
-                        {/* orders mapping */}
+                       
                         {
                             orders && orders.map((order)=>(
                                 <Stack p={is480?0:2} component={is480?"":Paper} elevation={1} rowGap={2}>
@@ -129,7 +128,7 @@ export const UserOrders = () => {
                                         </Stack>
                                     </Stack>
 
-                                    {/* middle */}
+                            
                                     <Stack rowGap={2}>
 
                                         {
@@ -173,7 +172,6 @@ export const UserOrders = () => {
 
                                     </Stack>
 
-                                    {/* lower */}
                                     <Stack mt={2} flexDirection={'row'} justifyContent={'space-between'}>
                                         <Typography mb={2}>Status : {order.status}</Typography>
                                     </Stack>
@@ -183,7 +181,6 @@ export const UserOrders = () => {
 
                         }
                         
-                        {/* no orders animation */}
                         {
                         !orders.length && 
                             <Stack mt={is480?'2rem':0} mb={'7rem'} alignSelf={'center'} rowGap={2}>
@@ -202,7 +199,6 @@ export const UserOrders = () => {
             </Stack>
         
         }
-
     </Stack>
   )
 }
