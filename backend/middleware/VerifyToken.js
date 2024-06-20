@@ -36,6 +36,8 @@ exports.verifyToken=async(req,res,next)=>{
         else if (error instanceof jwt.JsonWebTokenError) {
             return res.status(401).json({ message: "Invalid Token, please login again" });
         } 
-       
+        else {
+            return res.status(500).json({ message: "Internal Server Error" });
+        }
     }
 }
